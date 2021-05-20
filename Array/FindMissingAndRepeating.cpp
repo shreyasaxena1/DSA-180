@@ -1,3 +1,5 @@
+//Solved at GFG 
+//TC-O(n)
 class Solution
 {
 public:
