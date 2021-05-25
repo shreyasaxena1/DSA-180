@@ -1,5 +1,5 @@
 //Solved at LL
-//TC - O(n) SC - O(n)
+//TC - O(n) SC - O(1)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
