@@ -7,17 +7,9 @@ class Solution
     //As per constraints
     int t[1002][1002];
 
-    int max(int n, int m)
-    {
-        if (n > m)
-            return n;
-        else
-            return m;
-    }
-
 public:
     //Function to return max value that can be put in knapsack of capacity W.
-    int f(int W, int wt[], int val[], int n)
+    int knapSackUtil(int W, int wt[], int val[], int n)
     {
         if (W == 0 || n == 0)
         {
@@ -39,6 +31,6 @@ public:
     {
         
         memset(t, -1, sizeof t);
-        return f(W, wt, val, n);
+        return knapSackUtil(W, wt, val, n);
     }
 };
