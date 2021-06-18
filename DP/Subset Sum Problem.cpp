@@ -40,3 +40,18 @@ public:
         return dp[n][sum];
     }
 };
+
+
+
+//Aditya Verma sir code approach
+
+if (arr[i][j] <= j)
+{
+    //either he join                    //or not
+    t[i][j] = t[i - 1][j - arr[i - 1]] || t[i - 1][j];
+}
+else
+{
+    //can't join
+    t[i][j] = t[i - 1][j];
+}
