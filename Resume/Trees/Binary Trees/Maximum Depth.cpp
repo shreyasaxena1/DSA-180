@@ -1,5 +1,4 @@
 //Same as height
-
 class Solution {
 public:
     int height(TreeNode *root){
