@@ -1,0 +1,27 @@
+// #129. Sum Root to Leaf Numbers
+
+class Solution {
+public:
+    int ans=0;
+    void sumNumbersUtils(TreeNode *root,int val){
+        if(!root)
+            return;
+        
+        val=val*10+root->val;
+        
+        if(!root->left&&!root->right)
+            ans+=val;
+        
+        sumNumbersUtils(root->left,val);
+        sumNumbersUtils(root->right,val);
+      
+
+    }
+    
+    int sumNumbers(TreeNode* root) {
+        if(!root) return 0;
+        
+        sumNumbersUtils(root,0);
+        return ans;
+    }
+};
