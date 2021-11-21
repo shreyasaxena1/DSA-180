@@ -14,3 +14,38 @@ public:
         return root1;
     }
 };
+
+//Iterative DFS 
+class Solution {
+public:
+    TreeNode* mergeTrees(TreeNode* root1, TreeNode* root2) {
+        if(root1==NULL) return root2;
+        if(root2==NULL) return root1;
+        
+        stack<pair<TreeNode*,TreeNode*>>s;
+        s.push({root1,root2});
+        
+        while(!s.empty()){
+          pair<TreeNode*,TreeNode*> p= s.top();
+          s.pop();
+          TreeNode *t1=p.first;
+          TreeNode *t2=p.second;
+          
+          t1->val+=t2->val;
+            
+          //Left Tree
+          if(t1->left==NULL)
+              t1->left=t2->left;
+          else if(t2->left!=NULL)
+              s.push({t1->left,t2->left});
+         
+        //Right Tree
+          if(t1->right==NULL)
+              t1->right=t2->right;
+          else if(t2->right!=NULL)
+              s.push({t1->right,t2->right});
+        }
+        
+        return root1;
+    }
+};
