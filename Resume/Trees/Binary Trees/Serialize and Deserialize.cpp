@@ -1,3 +1,4 @@
+//Same for BT and BST
 class Codec {
 public:
     string serialize(TreeNode* root) {
