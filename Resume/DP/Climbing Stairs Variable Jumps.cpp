@@ -11,3 +11,4 @@ int cs(int arr[], int n){
 return dp[0];
 }
  
+//Same as climb stairs (n to 0) - just changed number of jumps with given array for each stair : ways from 0 to n
